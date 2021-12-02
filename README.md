@@ -10,16 +10,16 @@ Use this section to describe your final project and perhaps any links to relevan
 
 ## Wireframes
 
-![Landing Page](/project_imgs/landing-page.png)
+![Landing Page](/pkmnteam/project_imgs/landing-page.png)
 
-![Team Building Form](/project_imgs/team-form.png)
+![Team Building Form](/pkmnteam/project_imgs/team-form.png)
 
-![List of Uploaded Teams](/project_imgs/team-list.png)
+![List of Uploaded Teams](/pkmnteam/project_imgs/team-list.png)
 
 
 
 ## Component Hierarchy
-![Component Hierarchy](/project_imgs/component-heirarchy.png)
+![Component Hierarchy](/pkmnteam/project_imgs/component-heirarchy.png)
 
 ## API and Data Sample
 
@@ -56,7 +56,7 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 - add a like button
 - Use local storage to save user favorites
 - add a team inspect page
-- ![Team Inspection Page](/project_imgs/team-inspect.png)
+- ![Team Inspection Page](/pkmnteam/project_imgs/team-inspect.png)
 
 ## Project Schedule
 
