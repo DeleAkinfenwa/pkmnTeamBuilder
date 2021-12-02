@@ -23,8 +23,7 @@ The main goal of this app is to get the user to create a team of pokemon, upload
 
 ## API and Data Sample
 
-Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This __must__ be properly formatted. An example is below:
-
+airtableAPI
 ```json
 {
     "records": [
@@ -43,6 +42,27 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
             },
             "createdTime": "2021-12-01T20:52:17.000Z"
         },
+```
+
+Pokeapi.co
+```
+{
+  "id": 413,
+  "name": "wormadam",
+  "order": 441,
+  "gender_rate": 8,
+  "capture_rate": 45,
+  "base_happiness": 70,
+  "is_baby": false,
+  "is_legendary": false,
+  "is_mythical": false,
+  "hatch_counter": 15,
+  "has_gender_differences": false,
+  "forms_switchable": false,
+  "growth_rate": {
+    "name": "medium",
+    "url": "https://pokeapi.co/api/v2/growth-rate/2/"
+  },
 ```
 
 ### MVP
