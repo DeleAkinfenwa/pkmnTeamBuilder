@@ -10,10 +10,16 @@ Use this section to describe your final project and perhaps any links to relevan
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+![Landing Page](/project_imgs/landing-page.png)
+
+![Team Building Form](/project_imgs/team-form.png)
+
+![List of Uploaded Teams](/project_imgs/team-list.png)
+
+
 
 ## Component Hierarchy
-Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/image/GettingStartedWithReduxTutorial-React-Component-Structure.png) as an example.
+![Component Hierarchy](/project_imgs/component-heirarchy.png)
 
 ## API and Data Sample
 
@@ -48,9 +54,9 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 ### PostMVP  
 
 - add a like button
-- add an additional page to inspect individual pokemon on a team.
-- Add second API
 - Use local storage to save user favorites
+- add a team inspect page
+- ![Team Inspection Page](/project_imgs/team-inspect.png)
 
 ## Project Schedule
 
