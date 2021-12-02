@@ -6,7 +6,7 @@ Pokemon Team Builder
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and/or functionality.
+The main goal of this app is to get the user to create a team of pokemon, upload it to the API and be able to see other peoples uploaded teams. It will feature a form to get data from the user and a number of pages to navigate. The user will input their team and when the form is submitted it will grab that data from the pokeapi and store it in the airtable API for that user.
 
 ## Wireframes
 
