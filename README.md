@@ -94,22 +94,22 @@ Pokeapi.co
 ## Timeframes
 
 | Component | Priority | Estimated Time | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
+| --- | :---: |  :---: | :---: |
 | Clone repo and install dependancies | H | .5 hrs |.25 hr |
 | Create base framework for code () | H | 1.5 hrs | :---: |
-| Create component for APIs | H | 3 hrs | :---: | :---: |
-| Testing API | M | 1hr | :---: | :---: |
-| Create component for Form | H | 3 hrs | :---: | :---: |
-| Testing Forms | M | 1 hr | :---: | :---: |
-| Make user input pull data from API | H | 2 hrs | :---: | :---: |
-| Create components for team list page | H | 3 hrs | :---: | :---: |
-| Display team lists on the team list page | H | 2 hrs | :---: | :---: |
-| Create component for Header | M | 2 hrs | :---: | :---: |
-| Create component for Footer | M | 2 hrs | :---: | :---: |
-| Test Header and Footer | L | .5 hrs | :---: | :---: |
-| Style app for desktop | H | 3 hrs | :---: | :---: |
-| Style app for mobile | L | 3 hrs| :---: | :---: |
-| Total | | 27.5 hrs|   |   |
+| Create component for APIs | H | 3 hrs | :---: |
+| Testing API | M | 1hr | :---: |
+| Create component for Form | H | 3 hrs | :---: |
+| Testing Forms | M | 1 hr | :---: |
+| Make user input pull data from API | H | 2 hrs | :---: |
+| Create components for team list page | H | 3 hrs | :---: |
+| Display team lists on the team list page | H | 2 hrs | :---: |
+| Create component for Header | M | 2 hrs | :---: |
+| Create component for Footer | M | 2 hrs | :---: |
+| Test Header and Footer | L | .5 hrs | :---: |
+| Style app for desktop | H | 3 hrs | :---: |
+| Style app for mobile | L | 3 hrs| :---: |
+| Total | | 27.5 hrs|   |
 
 ## SWOT Analysis
 
