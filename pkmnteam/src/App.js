@@ -14,11 +14,12 @@ function App() {
 
   useEffect(() => {
     // pull data for specific pokemon
-    const pkmnList = async () => {
-      const pokemon = await getPkmn()
-      setPkmn(pokemon)
-      console.log(pokemon)
+    const onePkmn = async () => {
+      const res = await getPkmn()
+      setPkmn(res)
+      console.log(res)
     }
+    onePkmn()
 
   }, [toggle])
 
