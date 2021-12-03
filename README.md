@@ -93,10 +93,10 @@ Pokeapi.co
 
 ## Timeframes
 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Clone repo and install dependancies | H | .5 hrs | :---: | :---: |
-| Create base framework for code () | H | 1.5 hrs | :---: | :---: |
+| Clone repo and install dependancies | H | .5 hrs |.25 hr |
+| Create base framework for code () | H | 1.5 hrs | :---: |
 | Create component for APIs | H | 3 hrs | :---: | :---: |
 | Testing API | M | 1hr | :---: | :---: |
 | Create component for Form | H | 3 hrs | :---: | :---: |
