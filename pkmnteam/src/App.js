@@ -2,7 +2,9 @@
 import './App.css';
 import { getPkmn, getTeams, postTeam } from './services'
 import { useState, useEffect } from 'react'
-// import { Routes, Route } from 'react-router-dom'
+import { Routes } from 'react-router';
+import { Routes, Route } from 'react-router-dom'
+import Form from './components'
 
 
 
@@ -27,6 +29,9 @@ function App() {
   return (
     <div className="App">
       <h1>Pkmn Team Builder</h1>
+      <Routes>
+        <Route path='/Build' element={<Form />} />
+      </Routes>
     </div>
   );
 }
