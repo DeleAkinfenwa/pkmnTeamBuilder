@@ -2,16 +2,16 @@
 import './App.css';
 import { getPkmn, getTeams, postTeam } from './services'
 import { useState, useEffect } from 'react'
-import { Routes } from 'react-router';
 import { Routes, Route } from 'react-router-dom'
-import Form from './components'
+import Form from './components/Form'
+import { Autocomplete } from '@mui/material';
 
 
 
 function App() {
 
-  const [pkmn, setPkmn] = useState('')
-  const [team, setTeam] = useState([])
+  const [pkmn, setPkmn] = useState([])
+  const [team, setTeams] = useState([])
   const [toggle, setToggle] = useState(false)
 
   useEffect(() => {
@@ -22,15 +22,23 @@ function App() {
       console.log(res)
     }
     onePkmn()
+    // pull list of teams from airtable
+    const pkmnTeams = async () => {
+      const res = await getTeams()
+      setTeams(res)
+      console.log(res)
+    }
+    pkmnTeams()
 
   }, [toggle])
 
 
   return (
     <div className="App">
+
       <h1>Pkmn Team Builder</h1>
       <Routes>
-        <Route path='/Build' element={<Form />} />
+        <Route path='/' element={<Form pkmn={pkmn} />} />
       </Routes>
     </div>
   );
