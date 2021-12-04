@@ -19,7 +19,7 @@ function App() {
     const onePkmn = async () => {
       const res = await getPkmn()
       setPkmn(res)
-      console.log(res)
+      // console.log(res)
     }
     onePkmn()
     // pull list of teams from airtable
@@ -38,7 +38,7 @@ function App() {
 
       <h1>Pkmn Team Builder</h1>
       <Routes>
-        <Route path='/' element={<Form pkmn={pkmn} />} />
+        <Route path='/' element={<Form pkmn={pkmn} setToggle={setToggle} />} />
       </Routes>
     </div>
   );
