@@ -12,8 +12,13 @@ export default function Form(props) {
   const [pkmn5, setPkmn5] = useState('')
   const [pkmn6, setPkmn6] = useState('')
 
-  console.log(props.pkmn.data.name)
+  // console.log(pkmn1)
+  console.log(props.pkmn)
 
+
+  //changes in the form
+
+  // submit team to airtable
   const handleSubmit = async (e) => {
     e.preventDefault()
     const newTeam = {
@@ -28,8 +33,8 @@ export default function Form(props) {
     }
     if (props.pkmn) {
       const res = await postTeam(newTeam)
-      props.setToggle(prevToggle => !prevToggle)
     }
+    props.setToggle(prevToggle => !prevToggle)
   }
 
 
@@ -40,7 +45,6 @@ export default function Form(props) {
         <input
           type='text'
           value={name}
-          name='Name'
           placeholder="Whats your name?"
           className='input'
           onChange={(e) => setName(e.target.value)}
@@ -48,7 +52,6 @@ export default function Form(props) {
         <input
           type='text'
           value={teamName}
-          name='Team Name'
           placeholder="Team name?"
           className='input'
           onChange={(e) => setTeamName(e.target.value)}
@@ -56,15 +59,15 @@ export default function Form(props) {
         <input
           type='text'
           value={pkmn1}
-          name='pkmn1'
           placeholder="1st pokemon"
           className='input'
+          onChange={(e) => props.setPkmnID(e.target.value)}
           onChange={(e) => setPkmn1(e.target.value)}
         />
+        {/* <img src={props.pkmn.data.sprites.front_default} /> */}
         <input
           type='text'
           value={pkmn2}
-          name='pkmn2'
           placeholder="2nd pokemon"
           className='input'
           onChange={(e) => setPkmn2(e.target.value)}
@@ -72,7 +75,6 @@ export default function Form(props) {
         <input
           type='text'
           value={pkmn3}
-          name='pkmn3'
           placeholder="3rd pokemon"
           className='input'
           onChange={(e) => setPkmn3(e.target.value)}
@@ -80,7 +82,6 @@ export default function Form(props) {
         <input
           type='text'
           value={pkmn4}
-          name='pkmn4'
           placeholder="4th pokemon"
           className='input'
           onChange={(e) => setPkmn4(e.target.value)}
@@ -88,7 +89,6 @@ export default function Form(props) {
         <input
           type='text'
           value={pkmn5}
-          name='pkmn5'
           placeholder="5th pokemon"
           className='input'
           onChange={(e) => setPkmn5(e.target.value)}
@@ -96,7 +96,6 @@ export default function Form(props) {
         <input
           type='text'
           value={pkmn6}
-          name='pkmn6'
           placeholder="6th pokemon"
           className='input'
           onChange={(e) => setPkmn6(e.target.value)}

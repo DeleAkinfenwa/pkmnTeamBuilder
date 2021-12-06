@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+
 export const baseURL =
   `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/pkmnTeam`
 export const config = {
@@ -7,11 +8,10 @@ export const config = {
     Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
   }
 }
-export const pokeAPI = `https://pokeapi.co/api/v2/pokemon/mawile`
 
-
-export const getPkmn = async () => {
-  const response = await axios.get(pokeAPI)
+export const getPkmn = async (pkmnID) => {
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pkmnID}`)
+  console.log(pkmnID)
   return response
 }
 

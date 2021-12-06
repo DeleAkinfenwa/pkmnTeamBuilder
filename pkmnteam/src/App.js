@@ -11,15 +11,17 @@ import { Autocomplete } from '@mui/material';
 function App() {
 
   const [pkmn, setPkmn] = useState([])
-  const [team, setTeams] = useState([])
+  const [teams, setTeams] = useState([])
   const [toggle, setToggle] = useState(false)
+  const [pkmnID, setPkmnID] = useState('ditto')
+
 
   useEffect(() => {
     // pull data for specific pokemon
     const onePkmn = async () => {
-      const res = await getPkmn()
+      const res = await getPkmn(pkmnID)
       setPkmn(res)
-      // console.log(res)
+      console.log(res)
     }
     onePkmn()
     // pull list of teams from airtable
@@ -37,8 +39,12 @@ function App() {
     <div className="App">
 
       <h1>Pkmn Team Builder</h1>
+
       <Routes>
-        <Route path='/' element={<Form pkmn={pkmn} setToggle={setToggle} />} />
+        <Route path='/' element={<Form pkmn={pkmn} setToggle={setToggle} setPkmnID={setPkmnID} />} />
+        <Route path='/build' />
+        <Route path='/pokemonTeams' />
+
       </Routes>
     </div>
   );
