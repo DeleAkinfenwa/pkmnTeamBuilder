@@ -39,7 +39,7 @@ export default function Form(props) {
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form >
       <>
         <input
           type='text'
@@ -60,47 +60,71 @@ export default function Form(props) {
           value={pkmn1}
           placeholder="1st pokemon"
           className='input'
-          onChange={(e) => props.setPkmnID(e.target.value)}
-          onChange={(e) => setPkmn1(e.target.value)}
+          onChange={(e) => {
+            props.setPkmnID(e.target.value)
+            setPkmn1(e.target.value)
+          }
+          }
         />
+
         {/* <img src={props.pkmn.data.sprites.front_default} /> */}
         <input
           type='text'
           value={pkmn2}
           placeholder="2nd pokemon"
           className='input'
-          onChange={(e) => setPkmn2(e.target.value)}
+          onChange={(e) => {
+            props.setPkmnID(e.target.value)
+            setPkmn2(e.target.value)
+          }
+          }
         />
         <input
           type='text'
           value={pkmn3}
           placeholder="3rd pokemon"
           className='input'
-          onChange={(e) => setPkmn3(e.target.value)}
+          onChange={(e) => {
+            props.setPkmnID(e.target.value)
+            setPkmn3(e.target.value)
+          }
+          }
         />
         <input
           type='text'
           value={pkmn4}
           placeholder="4th pokemon"
           className='input'
-          onChange={(e) => setPkmn4(e.target.value)}
+          onChange={(e) => {
+            props.setPkmnID(e.target.value)
+            setPkmn4(e.target.value)
+          }
+          }
         />
         <input
           type='text'
           value={pkmn5}
           placeholder="5th pokemon"
           className='input'
-          onChange={(e) => setPkmn5(e.target.value)}
+          onChange={(e) => {
+            props.setPkmnID(e.target.value)
+            setPkmn5(e.target.value)
+          }
+          }
         />
         <input
           type='text'
           value={pkmn6}
           placeholder="6th pokemon"
           className='input'
-          onChange={(e) => setPkmn6(e.target.value)}
+          onChange={(e) => {
+            props.setPkmnID(e.target.value)
+            setPkmn5(e.target.value)
+          }
+          }
         />
       </>
-      <button type='submit'><Link to={`/pokemonTeams`}>Submit and View Teams</Link></button>
+      <button type='submit' onSubmit={handleSubmit}><Link to={`/pokemonTeams`}>Submit and View Teams</Link></button>
     </form>
   )
 }

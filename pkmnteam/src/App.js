@@ -18,6 +18,7 @@ function App() {
   const [pkmnID, setPkmnID] = useState('')
 
 
+
   useEffect(() => {
     // pull data for specific pokemon
     const onePkmn = async () => {
@@ -39,15 +40,24 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Pkmn Team Builder</h1>
-      {/* <Navbar /> */}
+      <header>
+        <h1 className='header'>Pkmn Team Builder</h1>
+        <Navbar />
+      </header>
+
 
       <Routes>
         <Route path='/' element='Hello Trainer' />
         <Route path='/build' element={<Form pkmn={pkmn} setToggle={setToggle} setPkmnID={setPkmnID} />} />
-        {/* <Route path='/pokemonTeams' element={<Teams teams={teams} />} /> */}
-
+        <Route path='/pokemonTeams' element={<Teams teams={teams} />} />
       </Routes>
+
+      <footer>
+        <p className='credit'>Made by Dele Akinfenwa</p>
+        <a className='contacts' href='https://github.com/DeleAkinfenwa'>
+          github
+        </a>
+      </footer>
     </div>
   );
 }

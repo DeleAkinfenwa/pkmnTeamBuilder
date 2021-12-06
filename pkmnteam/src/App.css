@@ -1,7 +1,47 @@
+
 .App {
   text-align: center;
+  background-color: rgb(201, 5, 5);
+  height: 100vh;
+  margin-top: 0;
 }
- .input {
-   margin: 30px;
-   display: block;
- }
+.input {
+  margin: 30px;   border: solid blue 4px;
+  display: block;
+}
+header{
+  margin: top 15px;
+  background-color: rgb(135, 2, 2);
+
+}
+
+footer{
+  background-color: rgb(58, 58, 58);
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.header{
+  color: blue;
+  font-size: 60px;
+  font-family:monospace;  
+  -webkit-text-fill-color: yellow;
+  -webkit-text-stroke-color: blue;
+  -webkit-text-stroke-width: 2px;
+}
+
+.contacts{
+  grid-column: 0 0 0 0 1;
+  
+}
+
+.headerLinks{
+  margin: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  color:white;
+  text-decoration: none;
+  border: solid blue 4px;
+
+}
