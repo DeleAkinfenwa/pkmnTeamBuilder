@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Form from './components/Form'
 import { Autocomplete } from '@mui/material';
+import Navbar from './components/Navbar';
+import Teams from './components/Teams';
 
 
 
@@ -13,7 +15,7 @@ function App() {
   const [pkmn, setPkmn] = useState([])
   const [teams, setTeams] = useState([])
   const [toggle, setToggle] = useState(false)
-  const [pkmnID, setPkmnID] = useState('ditto')
+  const [pkmnID, setPkmnID] = useState('')
 
 
   useEffect(() => {
@@ -32,18 +34,18 @@ function App() {
     }
     pkmnTeams()
 
-  }, [toggle])
+  }, [toggle, pkmnID])
 
 
   return (
     <div className="App">
-
       <h1>Pkmn Team Builder</h1>
+      {/* <Navbar /> */}
 
       <Routes>
-        <Route path='/' element={<Form pkmn={pkmn} setToggle={setToggle} setPkmnID={setPkmnID} />} />
-        <Route path='/build' />
-        <Route path='/pokemonTeams' />
+        <Route path='/' element='Hello Trainer' />
+        <Route path='/build' element={<Form pkmn={pkmn} setToggle={setToggle} setPkmnID={setPkmnID} />} />
+        {/* <Route path='/pokemonTeams' element={<Teams teams={teams} />} /> */}
 
       </Routes>
     </div>

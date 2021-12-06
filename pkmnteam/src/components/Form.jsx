@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from 'react-router-dom'
 import { Autocomplete } from "@mui/material";
-import { getTeams, postTeam } from "../services";
+import { postTeam } from "../services";
 
 export default function Form(props) {
   const [name, setName] = useState('')
@@ -15,8 +16,6 @@ export default function Form(props) {
   // console.log(pkmn1)
   console.log(props.pkmn)
 
-
-  //changes in the form
 
   // submit team to airtable
   const handleSubmit = async (e) => {
@@ -101,7 +100,7 @@ export default function Form(props) {
           onChange={(e) => setPkmn6(e.target.value)}
         />
       </>
-      <button type='submit'>Submit</button>
+      <button type='submit'><Link to={`/pokemonTeams`}>Submit and View Teams</Link></button>
     </form>
   )
 }
