@@ -4,6 +4,9 @@
   background-color: rgb(201, 5, 5);
   height: 100vh;
   margin-top: 0;
+  display: grid;
+  grid-template-rows: 120px 1fr 1fr 1fr 60px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .input {
   margin: 30px;   border: solid blue 4px;
@@ -11,18 +14,27 @@
 }
 header{
   margin: top 15px;
-  background-color: rgb(135, 2, 2);
+  background-color: gold;
+  grid-area: 1/1/1/6;
+}
 
+nav{
+ grid-area: 2/1/5/1;
+ background-color: darkred   ;
+}
+
+
+body{
+  grid-area: 2/2/4/5;
 }
 
 footer{
   background-color: rgb(58, 58, 58);
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-area: 5/1/6/6;
 }
 
-.header{
+
+.title{
   color: blue;
   font-size: 60px;
   font-family:monospace;  
@@ -31,9 +43,15 @@ footer{
   -webkit-text-stroke-width: 2px;
 }
 
+
+
+.credit{
+  grid-area: 5/1/5/2 ;
+
+}
 .contacts{
-  grid-column: 0 0 0 0 1;
-  
+  grid-area: 5/5/5/6;
+
 }
 
 .headerLinks{
@@ -43,5 +61,6 @@ footer{
   color:white;
   text-decoration: none;
   border: solid blue 4px;
+  display: block;
 
 }

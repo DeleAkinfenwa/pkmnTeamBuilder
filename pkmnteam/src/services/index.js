@@ -9,9 +9,9 @@ export const config = {
   }
 }
 
-export const getPkmn = async (pkmnID) => {
-  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pkmnID}`)
-  console.log(pkmnID)
+export const getPkmn = async (pkmnName) => {
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pkmnName}`)
+  console.log(pkmnName)
   console.log(response)
   return response
 }

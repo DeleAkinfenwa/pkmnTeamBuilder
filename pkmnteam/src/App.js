@@ -15,14 +15,14 @@ function App() {
   const [pkmn, setPkmn] = useState([])
   const [teams, setTeams] = useState([])
   const [toggle, setToggle] = useState(false)
+  const [pkmnName, setPkmnName] = useState('')
   const [pkmnID, setPkmnID] = useState('')
-
 
 
   useEffect(() => {
     // pull data for specific pokemon
     const onePkmn = async () => {
-      const res = await getPkmn(pkmnID)
+      const res = await getPkmn(pkmnName)
       setPkmn(res)
       console.log(res)
     }
@@ -35,22 +35,24 @@ function App() {
     }
     pkmnTeams()
 
-  }, [toggle, pkmnID])
+  }, [toggle, pkmnName])
 
 
   return (
     <div className="App">
       <header>
-        <h1 className='header'>Pkmn Team Builder</h1>
-        <Navbar />
+        <h1 className='title'>Pkmn Team Builder</h1>
       </header>
-
-
-      <Routes>
-        <Route path='/' element='Hello Trainer' />
-        <Route path='/build' element={<Form pkmn={pkmn} setToggle={setToggle} setPkmnID={setPkmnID} />} />
-        <Route path='/pokemonTeams' element={<Teams teams={teams} />} />
-      </Routes>
+      <nav>
+        <Navbar />
+      </nav>
+      <body>
+        <Routes>
+          <Route path='/' element='Hello Trainer' />
+          <Route path='/build' element={<Form pkmn={pkmn} setToggle={setToggle} setPkmnName={setPkmnName} setPkmnID={setPkmnID} />} />
+          <Route path='/pokemonTeams' element={<Teams teams={teams} />} />
+        </Routes>
+      </body>
 
       <footer>
         <p className='credit'>Made by Dele Akinfenwa</p>

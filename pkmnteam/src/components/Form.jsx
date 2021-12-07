@@ -13,8 +13,21 @@ export default function Form(props) {
   const [pkmn5, setPkmn5] = useState('')
   const [pkmn6, setPkmn6] = useState('')
 
+  const [pkmnID1, setpkmnID1] = useState(0)
+  const [pkmnID2, setpkmnID2] = useState(0)
+  const [pkmnID3, setpkmnID3] = useState(0)
+  const [pkmnID4, setpkmnID4] = useState(0)
+  const [pkmnID5, setpkmnID5] = useState(0)
+  const [pkmnID6, setpkmnID6] = useState(0)
+
   // console.log(pkmn1)
   console.log(props.pkmn)
+
+  // get the pkmnID using the pkmnName
+  useEffect(() => {
+    setpkmnID1(props.pkmn.data.id)
+
+  }, [pkmn1, pkmn2, pkmn3, pkmn4, pkmn5, pkmn6])
 
 
   // submit team to airtable
@@ -30,6 +43,10 @@ export default function Form(props) {
       pkmn5,
       pkmn6
     }
+
+
+    console.log(props.pkmn.data.id)
+
     if (props.pkmn) {
       const res = await postTeam(newTeam)
     }
@@ -40,7 +57,7 @@ export default function Form(props) {
 
   return (
     <form >
-      <>
+      <teaminput>
         <input
           type='text'
           value={name}
@@ -61,23 +78,20 @@ export default function Form(props) {
           placeholder="1st pokemon"
           className='input'
           onChange={(e) => {
-            props.setPkmnID(e.target.value)
+            props.setPkmnName(e.target.value)
             setPkmn1(e.target.value)
-          }
-          }
+          }}
         />
 
-        {/* <img src={props.pkmn.data.sprites.front_default} /> */}
         <input
           type='text'
           value={pkmn2}
           placeholder="2nd pokemon"
           className='input'
           onChange={(e) => {
-            props.setPkmnID(e.target.value)
+            props.setPkmnName(e.target.value)
             setPkmn2(e.target.value)
-          }
-          }
+          }}
         />
         <input
           type='text'
@@ -85,10 +99,9 @@ export default function Form(props) {
           placeholder="3rd pokemon"
           className='input'
           onChange={(e) => {
-            props.setPkmnID(e.target.value)
+            props.setPkmnName(e.target.value)
             setPkmn3(e.target.value)
-          }
-          }
+          }}
         />
         <input
           type='text'
@@ -96,10 +109,9 @@ export default function Form(props) {
           placeholder="4th pokemon"
           className='input'
           onChange={(e) => {
-            props.setPkmnID(e.target.value)
+            props.setPkmnName(e.target.value)
             setPkmn4(e.target.value)
-          }
-          }
+          }}
         />
         <input
           type='text'
@@ -107,10 +119,9 @@ export default function Form(props) {
           placeholder="5th pokemon"
           className='input'
           onChange={(e) => {
-            props.setPkmnID(e.target.value)
+            props.setPkmnName(e.target.value)
             setPkmn5(e.target.value)
-          }
-          }
+          }}
         />
         <input
           type='text'
@@ -118,12 +129,15 @@ export default function Form(props) {
           placeholder="6th pokemon"
           className='input'
           onChange={(e) => {
-            props.setPkmnID(e.target.value)
+            props.setPkmnName(e.target.value)
             setPkmn5(e.target.value)
-          }
-          }
+          }}
         />
-      </>
+      </teaminput>
+
+      <sprites>
+        <img onChange={pkmnID1 = props.pkmn.data.id} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmnID1}.png`} />
+      </sprites>
       <button type='submit' onSubmit={handleSubmit}><Link to={`/pokemonTeams`}>Submit and View Teams</Link></button>
     </form>
   )
