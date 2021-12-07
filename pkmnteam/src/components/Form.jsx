@@ -95,6 +95,7 @@ export default function Form(props) {
           placeholder="2nd pokemon"
           className='input'
           onChange={(e) => {
+            e.preventDefault()
             props.setPkmnName(e.target.value)
             setPkmn2(e.target.value)
             setPkmn2ID(props.pkmn.data.id)

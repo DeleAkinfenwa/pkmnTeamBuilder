@@ -9,8 +9,10 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .input {
-  margin: 30px;   border: solid blue 4px;
+  margin: 30px;   
+  border: solid blue 4px;
   display: block;
+  font-size: x-large;
 }
 header{
   margin: top 15px;
@@ -33,6 +35,20 @@ footer{
   grid-area: 5/1/6/6;
 }
 
+.team{
+  margin: 30px 40px;
+  padding: 20px;
+  text-align: left;
+  background-color: gold;
+  grid-area: 2/2/4/5;
+  overflow: auto;
+}
+
+.teamSprites{
+  /* background-color: gold; */
+  display: inline-block;
+
+}
 
 .title{
   color: blue;
@@ -47,6 +63,7 @@ footer{
 
 .credit{
   grid-area: 5/1/5/2 ;
+  color: white;
 
 }
 .contacts{
