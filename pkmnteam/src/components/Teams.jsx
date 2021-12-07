@@ -25,16 +25,26 @@ export default function Teams(props) {
   return (
     <div>
       <h3>List of pokemon teams</h3>
-      <div>
-        {/* <h4>{props.teams.name}</h4>
-        <h4>{props.teams.teamName}</h4>
-        <img src={pkmn1} />
-        <img src={pkmn2} />
-        <img src={pkmn3} />
-        <img src={pkmn4} />
-        <img src={pkmn5} />
-        <img src={pkmn6} /> */}
-      </div>
+      <sprites>
+        {/* <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn1ID}.png`}
+        />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn2ID}.png`}
+        />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn3ID}.png`}
+        />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn4ID}.png`}
+        />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn5ID}.png`}
+        />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn6ID}.png`}
+        /> */}
+      </sprites>
     </div >
   )
 }

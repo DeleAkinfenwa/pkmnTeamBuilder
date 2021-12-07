@@ -4,6 +4,7 @@ import { Autocomplete } from "@mui/material";
 import { postTeam } from "../services";
 
 export default function Form(props) {
+
   const [name, setName] = useState('')
   const [teamName, setTeamName] = useState('')
   const [pkmn1, setPkmn1] = useState('')
@@ -13,21 +14,21 @@ export default function Form(props) {
   const [pkmn5, setPkmn5] = useState('')
   const [pkmn6, setPkmn6] = useState('')
 
-  const [pkmnID1, setpkmnID1] = useState(0)
-  const [pkmnID2, setpkmnID2] = useState(0)
-  const [pkmnID3, setpkmnID3] = useState(0)
-  const [pkmnID4, setpkmnID4] = useState(0)
-  const [pkmnID5, setpkmnID5] = useState(0)
-  const [pkmnID6, setpkmnID6] = useState(0)
+  const [pkmn1ID, setPkmn1ID] = useState(0)
+  const [pkmn2ID, setPkmn2ID] = useState(0)
+  const [pkmn3ID, setPkmn3ID] = useState(0)
+  const [pkmn4ID, setPkmn4ID] = useState(0)
+  const [pkmn5ID, setPkmn5ID] = useState(0)
+  const [pkmn6ID, setpkmn6ID] = useState(0)
 
   // console.log(pkmn1)
   console.log(props.pkmn)
 
   // get the pkmnID using the pkmnName
-  useEffect(() => {
-    setpkmnID1(props.pkmn.data.id)
+  // useEffect(() => {
+  //   setpkmnID1(props.pkmn.data.id)
 
-  }, [pkmn1, pkmn2, pkmn3, pkmn4, pkmn5, pkmn6])
+  // }, [pkmn1, pkmn2, pkmn3, pkmn4, pkmn5, pkmn6])
 
 
   // submit team to airtable
@@ -37,15 +38,18 @@ export default function Form(props) {
       name,
       teamName,
       pkmn1,
+      pkmn1ID,
       pkmn2,
+      pkmn2ID,
       pkmn3,
+      pkmn3ID,
       pkmn4,
+      pkmn4ID,
       pkmn5,
-      pkmn6
+      pkmn5ID,
+      pkmn6,
+      pkmn6ID
     }
-
-
-    console.log(props.pkmn.data.id)
 
     if (props.pkmn) {
       const res = await postTeam(newTeam)
@@ -80,6 +84,8 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value)
             setPkmn1(e.target.value)
+            setPkmn1ID(props.pkmn.data.id)
+            console.log(props.pkmn.data.id)
           }}
         />
 
@@ -91,7 +97,9 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value)
             setPkmn2(e.target.value)
+            setPkmn2ID(props.pkmn.data.id)
           }}
+
         />
         <input
           type='text'
@@ -101,8 +109,10 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value)
             setPkmn3(e.target.value)
+            setPkmn3ID(props.pkmn.data.id)
           }}
         />
+
         <input
           type='text'
           value={pkmn4}
@@ -111,7 +121,8 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value)
             setPkmn4(e.target.value)
-          }}
+            setPkmn4ID(props.pkmn.data.id)
+          }} setpkmn5ID
         />
         <input
           type='text'
@@ -121,6 +132,7 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value)
             setPkmn5(e.target.value)
+            setPkmn5ID(props.pkmn.data.id)
           }}
         />
         <input
@@ -130,13 +142,31 @@ export default function Form(props) {
           className='input'
           onChange={(e) => {
             props.setPkmnName(e.target.value)
-            setPkmn5(e.target.value)
+            setPkmn6(e.target.value)
+            setpkmn6ID(props.pkmn.data.id)
           }}
         />
       </teaminput>
 
       <sprites>
-        <img onChange={pkmnID1 = props.pkmn.data.id} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmnID1}.png`} />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn1ID}.png`}
+        />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn2ID}.png`}
+        />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn3ID}.png`}
+        />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn4ID}.png`}
+        />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn5ID}.png`}
+        />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn6ID}.png`}
+        />
       </sprites>
       <button type='submit' onSubmit={handleSubmit}><Link to={`/pokemonTeams`}>Submit and View Teams</Link></button>
     </form>
