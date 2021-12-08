@@ -17,6 +17,10 @@ nav {
   grid-area: 2/1/5/1;
   background-color: darkred;
 }
+footer {
+  background-color: rgb(58, 58, 58);
+  grid-area: 5/1/6/6;
+}
 
 .title {
   color: blue;
@@ -32,11 +36,6 @@ nav {
   display: inline;
 }
 
-footer {
-  background-color: rgb(58, 58, 58);
-  grid-area: 5/1/6/6;
-}
-
 .home {
   display: inline-block;
   text-align: center;
@@ -47,9 +46,10 @@ footer {
 .pokeball {
   max-height: 25px;
 }
-.form {
+/* .form {
   grid-area: 2/2/4/5;
-}
+} */
+
 .formInput {
   text-align: left;
   display: inline-block;

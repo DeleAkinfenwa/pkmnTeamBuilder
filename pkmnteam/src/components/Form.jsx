@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { postTeam } from "../services";
 
 export default function Form(props) {
@@ -19,17 +19,8 @@ export default function Form(props) {
   } = props;
 
   const navigate = useNavigate();
-
-  const [teamName, setTeamName] = useState("");
-  // const [pkmn1, setPkmn1] = useState("");
-  // const [pkmn2, setPkmn2] = useState("");
-  // const [pkmn3, setPkmn3] = useState("");
-  // const [pkmn4, setPkmn4] = useState("");
-  // const [pkmn5, setPkmn5] = useState("");
-  // const [pkmn6, setPkmn6] = useState("");
-
-
   const name = props.name;
+  const [teamName, setTeamName] = useState("");
 
   // submit team to airtable
   const handleSubmit = async (e) => {
@@ -53,16 +44,20 @@ export default function Form(props) {
 
     console.log("i was clicked");
     const res = await postTeam(newTeam);
-
     props.setToggle((prevToggle) => !prevToggle);
     navigate('/pokemonTeams')
   };
+
+// props.pkmn1 ? pkmn1ID=props.pkmn1ID : 0;
+
+
 
   const iconURL =
     "https://toppng.com/uploads/preview/okeball-pokeball-pixel-11562866044nlupenwzqu.png";
 
   return (
     <form className="form" onSubmit={handleSubmit}>
+      <h3>{`Alright, ${name}, pick your team!`}</h3>
       <div className="formInput">
         <input
           type="text"
@@ -79,7 +74,6 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value);
             props.setPkmn1(e.target.value);
-            // setPkmn1ID(props.pkmn.data.id)
           }}
         />
 
@@ -91,7 +85,6 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value);
             props.setPkmn2(e.target.value);
-            // setPkmn2ID(props.pkmn.data.id);
           }}
         />
         <input
@@ -102,7 +95,6 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value);
             props.setPkmn3(e.target.value);
-            // setPkmn3ID(props.pkmn.data.id);
           }}
         />
 
@@ -114,7 +106,6 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value);
             props.setPkmn4(e.target.value);
-            // setPkmn4ID(props.pkmn.data.id);
           }}
         />
         <input
@@ -125,7 +116,6 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value);
             props.setPkmn5(e.target.value);
-            // setPkmn5ID(props.pkmn.data.id);
           }}
         />
         <input
@@ -136,7 +126,6 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value);
             props.setPkmn6(e.target.value);
-            // setPkmn6ID(props.pkmn.data.id);
           }}
         />
       </div>
@@ -144,22 +133,28 @@ export default function Form(props) {
       <div className="teamBuildSprites">
         <img
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn1ID}.png`}
+          alt='pkmn sprite'
         />
         <img
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn2ID}.png`}
+          alt='pkmn sprite'
         />
         <img
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn3ID}.png`}
+          alt='pkmn sprite'
         />
         <img
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn4ID}.png`}
-        />
+          alt='pkmn sprite'
+          />
         <img
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn5ID}.png`}
-        />
+          alt='pkmn sprite'
+          />
         <img
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn6ID}.png`}
-        />
+          alt='pkmn sprite'
+          />
       </div>
       <button type="submit">
         {<img className="pokeball" src={iconURL} alt="pokeball icon" />}

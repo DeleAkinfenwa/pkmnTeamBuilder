@@ -9,7 +9,7 @@ export default function Teams(props) {
       <team className='team'>
         {props.teams.map((team) => (
           <div className='teamSprites'>
-            <p>{`${team.fields.name}'s team`}</p>
+            <p>{`${team.fields.name}'s team, ${team.fields.teamName}`}</p>
             <img
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${team.fields.pkmn1ID}.png`}
               alt='pkmn sprite'
