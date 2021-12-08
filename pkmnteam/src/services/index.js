@@ -11,8 +11,6 @@ export const config = {
 
 export const getPkmn = async (pkmnName) => {
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pkmnName}`)
-  console.log(pkmnName)
-  console.log(response)
   return response
 }
 
