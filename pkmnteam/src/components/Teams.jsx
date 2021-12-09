@@ -5,7 +5,7 @@ export default function Teams(props) {
 
   return (
     <div>
-      <h3>List of pokemon teams</h3>
+      <h3 className="teamtext">List of pokemon teams</h3>
       <team className="team">
         {props.teams.map((team) => (
           <div className="teamViewSprites">

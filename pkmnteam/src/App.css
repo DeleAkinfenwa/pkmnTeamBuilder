@@ -120,6 +120,10 @@ footer {
   color: white;
   font-size: 20px;
 }
+.teamtext {
+  font-size: x-large;
+  color: white;
+}
 .teamViewSprites {
   margin: 20px;
   height: 25px;
@@ -153,19 +157,33 @@ footer {
   display: block;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 770px) {
   .title {
-    color: red;
-    font-size: 30px;
-    font-family: monospace;
-    -webkit-text-fill-color: yellow;
-    -webkit-text-stroke-color: blue;
-    -webkit-text-stroke-width: 2px;
+    font-size: 70px;
+    font-family: Tahoma;
+  }
+
+  .headerLinks {
+    margin: 20px auto;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    border: solid gold 4px;
+    display: block;
   }
 
   .sprite {
     display: block;
-    width: 100px;
-    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 75 px;
+    height: 75px;
+  }
+
+  .teamViewSprites {
+    margin: 15px;
+    height: 25px;
+    display: inline-block;
   }
 }
