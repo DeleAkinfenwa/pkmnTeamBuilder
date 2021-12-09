@@ -160,7 +160,7 @@ footer {
 
 @media (max-width: 770px) {
   .title {
-    font-size: 70px;
+    font-size: 50px;
     font-family: Tahoma;
   }
 
@@ -178,7 +178,7 @@ footer {
     display: block;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 75 px;
+    width: 75px;
     height: 75px;
   }
 
