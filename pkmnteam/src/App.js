@@ -10,11 +10,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 function App() {
-  const [pkmn, setPkmn] = useState([]);
   const [teams, setTeams] = useState([]);
   const [toggle, setToggle] = useState(false);
-  const [pkmnName, setPkmnName] = useState("");
-  const [pkmnID, setPkmnID] = useState("1");
   const [name, setName] = useState("");
 
   // Getting the pkmn ID's(numbers) to use for the sprites
@@ -98,24 +95,14 @@ function App() {
             path="/build"
             element={
               <Form
-                pkmn={pkmn}
                 setToggle={setToggle}
                 name={name}
-                setPkmnName={setPkmnName}
-                setPkmnID={setPkmnID}
                 pkmn1ID={pkmn1ID}
                 pkmn2ID={pkmn2ID}
                 pkmn3ID={pkmn3ID}
                 pkmn4ID={pkmn4ID}
                 pkmn5ID={pkmn5ID}
                 pkmn6ID={pkmn6ID}
-                // setPkmn1={setPkmn1}
-                // setPkmn2={setPkmn2}
-                // setPkmn3={setPkmn3}
-                // setPkmn4={setPkmn4}
-                // setPkmn5={setPkmn5}
-                // setPkmn6={setPkmn6}
-                // pkmn1={pkmn1}
                 updatePkmn1={updatePkmn1}
                 updatePkmn2={updatePkmn2}
                 updatePkmn3={updatePkmn3}

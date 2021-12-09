@@ -70,7 +70,6 @@ export default function Form(props) {
           placeholder="1st pokemon"
           className="input"
           onChange={(e) => {
-            props.setPkmnName(e.target.value);
             props.updatePkmn1(e.target.value);
           }}
         />
@@ -81,7 +80,6 @@ export default function Form(props) {
           placeholder="2nd pokemon"
           className="input"
           onChange={(e) => {
-            props.setPkmnName(e.target.value);
             props.updatePkmn2(e.target.value);
           }}
         />
@@ -91,7 +89,6 @@ export default function Form(props) {
           placeholder="3rd pokemon"
           className="input"
           onChange={(e) => {
-            props.setPkmnName(e.target.value);
             props.updatePkmn3(e.target.value);
           }}
         />
@@ -102,7 +99,6 @@ export default function Form(props) {
           placeholder="4th pokemon"
           className="input"
           onChange={(e) => {
-            props.setPkmnName(e.target.value);
             props.updatePkmn4(e.target.value);
           }}
         />
@@ -112,7 +108,6 @@ export default function Form(props) {
           placeholder="5th pokemon"
           className="input"
           onChange={(e) => {
-            props.setPkmnName(e.target.value);
             props.updatePkmn5(e.target.value);
           }}
         />
@@ -122,7 +117,6 @@ export default function Form(props) {
           placeholder="6th pokemon"
           className="input"
           onChange={(e) => {
-            props.setPkmnName(e.target.value);
             props.updatePkmn6(e.target.value);
           }}
         />

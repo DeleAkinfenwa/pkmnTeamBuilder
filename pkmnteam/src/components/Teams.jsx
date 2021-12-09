@@ -1,14 +1,12 @@
 import React from "react";
 
 export default function Teams(props) {
-  console.log(props.teams);
-
   return (
     <div>
       <h3 className="teamtext">List of pokemon teams</h3>
-      <team className="team">
-        {props.teams.map((team) => (
-          <div className="teamViewSprites">
+      <team is="x3d" className="team">
+        {props.teams.map((team, key) => (
+          <div className="teamViewSprites" key={key}>
             <p className="teamTitle">{`${team.fields.name}'s team, ${team.fields.teamName}`}</p>
             <img
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${team.fields.pkmn1ID}.png`}
