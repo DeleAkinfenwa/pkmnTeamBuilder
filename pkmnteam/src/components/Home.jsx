@@ -19,7 +19,7 @@ export default function Home(props) {
       <input
         type="text"
         value={props.name}
-        placeholder="Whats your name?"
+        placeholder="Name?"
         className="input"
         onChange={(e) => 
           props.setName(e.target.value)

@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: rgb(201, 5, 5);
-  height: 100vh;
+  min-height: 100%;
   margin-top: 0;
   display: grid;
   grid-template-rows: 120px 1fr 1fr 1fr 60px;
@@ -42,52 +42,79 @@ footer {
   margin: 200px;
   color: gold;
 }
-
-.pokeball {
-  max-height: 25px;
-}
-/* .form {
-  grid-area: 2/2/4/5;
+/* .text {
+  font-size: x-large;
+  color: white;
 } */
 
+.pokeball {
+  max-height: 35px;
+}
+.form {
+  display: grid;
+  grid-template-rows: 50px 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
 .formInput {
-  text-align: left;
-  display: inline-block;
+  grid-area: 2/1/4/2;
+  justify-content: left;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.formButton {
+  grid-area: 4/2/4/1;
+  width: 40px;
+  height: 30px;
 }
 .input {
-  margin: 30px;
+  margin: 25px;
   border: solid blue 4px;
-  width: 30%;
+  width: 250px;
   font-size: x-large;
 }
 
 .teamBuildSprites {
-  grid-area: 2/4/5/4;
-  display: inline;
-  max-width: 35%;
-  max-height: 35%;
+  grid-area: 2/3/4/5;
+}
+.sprite {
+  width: 100px;
+  height: 100px;
 }
 
 .team {
-  margin: 30px auto;
-  padding: 20px;
   text-align: left;
   background-color: gold;
-  grid-area: 2/2/4/5;
-  overflow: scroll;
+  height: 50px;
+  overflow-y: scroll;
 }
-
+.teamTitle {
+  color: white;
+  font-size: 20px;
+}
 .teamViewSprites {
-  background-color: gold;
+  margin: 20px;
+  height: 25px;
   display: inline-block;
 }
 
 .credit {
-  text-align: left;
+  text-align: center;
   color: white;
+  max-width: 200px;
+  /* grid-area: 5/1/5/2; */
 }
+
 .contacts {
-  text-align: right;
+}
+.icon {
+  margin: 10px auto;
+  max-width: 35px;
+  max-height: 35px;
+  color: white;
+  filter: invert(100%);
+  grid-area: 5/4/5/5;
 }
 
 .headerLinks {

@@ -45,19 +45,17 @@ export default function Form(props) {
     console.log("i was clicked");
     const res = await postTeam(newTeam);
     props.setToggle((prevToggle) => !prevToggle);
-    navigate('/pokemonTeams')
+    navigate("/pokemonTeams");
   };
 
-// props.pkmn1 ? pkmn1ID=props.pkmn1ID : 0;
-
-
+  // props.pkmn1 ? pkmn1ID=props.pkmn1ID : 0;
 
   const iconURL =
     "https://toppng.com/uploads/preview/okeball-pokeball-pixel-11562866044nlupenwzqu.png";
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <h3>{`Alright, ${name}, pick your team!`}</h3>
+      <h3 className="text">{`Alright, ${name}, it's time to pick your team! Type in a pokemon name or number in the pokemon slots.`}</h3>
       <div className="formInput">
         <input
           type="text"
@@ -74,6 +72,7 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value);
             props.setPkmn1(e.target.value);
+            props.updatePkmn1(e.target.value);
           }}
         />
 
@@ -85,6 +84,7 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value);
             props.setPkmn2(e.target.value);
+            props.updatePkmn2(e.target.value);
           }}
         />
         <input
@@ -95,6 +95,7 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value);
             props.setPkmn3(e.target.value);
+            props.updatePkmn3(e.target.value);
           }}
         />
 
@@ -106,6 +107,7 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value);
             props.setPkmn4(e.target.value);
+            props.updatePkmn4(e.target.value);
           }}
         />
         <input
@@ -116,6 +118,7 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value);
             props.setPkmn5(e.target.value);
+            props.updatePkmn5(e.target.value);
           }}
         />
         <input
@@ -126,37 +129,44 @@ export default function Form(props) {
           onChange={(e) => {
             props.setPkmnName(e.target.value);
             props.setPkmn6(e.target.value);
+            props.updatePkmn6(e.target.value);
           }}
         />
       </div>
 
       <div className="teamBuildSprites">
         <img
+          className="sprite"
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn1ID}.png`}
-          alt='pkmn sprite'
+          alt="pkmn sprite"
         />
         <img
+          className="sprite"
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn2ID}.png`}
-          alt='pkmn sprite'
+          alt="pkmn sprite"
         />
         <img
+          className="sprite"
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn3ID}.png`}
-          alt='pkmn sprite'
+          alt="pkmn sprite"
         />
         <img
+          className="sprite"
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn4ID}.png`}
-          alt='pkmn sprite'
-          />
+          alt="pkmn sprite"
+        />
         <img
+          className="sprite"
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn5ID}.png`}
-          alt='pkmn sprite'
-          />
+          alt="pkmn sprite"
+        />
         <img
+          className="sprite"
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmn6ID}.png`}
-          alt='pkmn sprite'
-          />
+          alt="pkmn sprite"
+        />
       </div>
-      <button type="submit">
+      <button type="submit" className="formButton">
         {<img className="pokeball" src={iconURL} alt="pokeball icon" />}
       </button>
     </form>
