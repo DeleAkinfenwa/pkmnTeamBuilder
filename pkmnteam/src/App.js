@@ -17,6 +17,7 @@ function App() {
   const [pkmnID, setPkmnID] = useState("1");
   const [name, setName] = useState("");
 
+  // Getting the pkmn ID's(numbers) to use for the sprites
   const [pkmn1ID, setPkmn1ID] = useState(0);
   const [pkmn2ID, setPkmn2ID] = useState(0);
   const [pkmn3ID, setPkmn3ID] = useState(0);
@@ -24,13 +25,7 @@ function App() {
   const [pkmn5ID, setPkmn5ID] = useState(0);
   const [pkmn6ID, setPkmn6ID] = useState(0);
 
-  const [pkmn1, setPkmn1] = useState("");
-  const [pkmn2, setPkmn2] = useState("");
-  const [pkmn3, setPkmn3] = useState("");
-  const [pkmn4, setPkmn4] = useState("");
-  const [pkmn5, setPkmn5] = useState("");
-  const [pkmn6, setPkmn6] = useState("");
-
+  // getting API data on specific pokemon from each form slot
   const updatePkmn1 = (pkmnName) => {
     const onePkmn = async () => {
       const slot1 = await getPkmn(pkmnName);
@@ -74,45 +69,11 @@ function App() {
     onePkmn();
   };
 
-  // useEffect(() => {
-  //   // pull data for specific pokemon slot
-
-  //   const onePkmn = async () => {
-  //     const slot1 = await getPkmn(pkmn1);
-  //     console.log(slot1);
-  //     setPkmn(slot1);
-  //     setPkmn1ID(slot1.data.id);
-
-  //     const slot2 = await getPkmn(pkmn2);
-  //     setPkmn(slot2);
-  //     setPkmn2ID(slot2.data.id);
-
-  //     const slot3 = await getPkmn(pkmn3);
-  //     setPkmn(slot3);
-  //     setPkmn3ID(slot3.data.id);
-
-  //     const slot4 = await getPkmn(pkmn4);
-  //     setPkmn(slot4);
-  //     setPkmn4ID(slot4.data.id);
-
-  //     const slot5 = await getPkmn(pkmn5);
-  //     setPkmn(slot5);
-  //     setPkmn5ID(slot5.data.id);
-
-  //     const slot6 = await getPkmn(pkmn6);
-  //     setPkmn(slot6);
-  //     setPkmn6ID(slot6.data.id);
-  //   };
-  //   // setTimeout(onePkmn(), 1000)
-  //   onePkmn();
-  // }, [toggle, pkmnName]);
-
+  // pull list of teams from airtable
   useEffect(() => {
-    // pull list of teams from airtable
     const pkmnTeams = async () => {
       const res = await getTeams();
       setTeams(res);
-      console.log(res);
     };
     pkmnTeams();
   }, [toggle]);
@@ -148,12 +109,12 @@ function App() {
                 pkmn4ID={pkmn4ID}
                 pkmn5ID={pkmn5ID}
                 pkmn6ID={pkmn6ID}
-                setPkmn1={setPkmn1}
-                setPkmn2={setPkmn2}
-                setPkmn3={setPkmn3}
-                setPkmn4={setPkmn4}
-                setPkmn5={setPkmn5}
-                setPkmn6={setPkmn6}
+                // setPkmn1={setPkmn1}
+                // setPkmn2={setPkmn2}
+                // setPkmn3={setPkmn3}
+                // setPkmn4={setPkmn4}
+                // setPkmn5={setPkmn5}
+                // setPkmn6={setPkmn6}
                 // pkmn1={pkmn1}
                 updatePkmn1={updatePkmn1}
                 updatePkmn2={updatePkmn2}

@@ -45,10 +45,10 @@ export default function Form(props) {
     console.log("i was clicked");
     const res = await postTeam(newTeam);
     props.setToggle((prevToggle) => !prevToggle);
-    navigate("/pokemonTeams");
+    if (res) {
+      navigate("/pokemonTeams");
+    }
   };
-
-  // props.pkmn1 ? pkmn1ID=props.pkmn1ID : 0;
 
   const iconURL =
     "https://toppng.com/uploads/preview/okeball-pokeball-pixel-11562866044nlupenwzqu.png";
@@ -71,7 +71,6 @@ export default function Form(props) {
           className="input"
           onChange={(e) => {
             props.setPkmnName(e.target.value);
-            props.setPkmn1(e.target.value);
             props.updatePkmn1(e.target.value);
           }}
         />
@@ -83,7 +82,6 @@ export default function Form(props) {
           className="input"
           onChange={(e) => {
             props.setPkmnName(e.target.value);
-            props.setPkmn2(e.target.value);
             props.updatePkmn2(e.target.value);
           }}
         />
@@ -94,7 +92,6 @@ export default function Form(props) {
           className="input"
           onChange={(e) => {
             props.setPkmnName(e.target.value);
-            props.setPkmn3(e.target.value);
             props.updatePkmn3(e.target.value);
           }}
         />
@@ -106,7 +103,6 @@ export default function Form(props) {
           className="input"
           onChange={(e) => {
             props.setPkmnName(e.target.value);
-            props.setPkmn4(e.target.value);
             props.updatePkmn4(e.target.value);
           }}
         />
@@ -117,7 +113,6 @@ export default function Form(props) {
           className="input"
           onChange={(e) => {
             props.setPkmnName(e.target.value);
-            props.setPkmn5(e.target.value);
             props.updatePkmn5(e.target.value);
           }}
         />
@@ -128,7 +123,6 @@ export default function Form(props) {
           className="input"
           onChange={(e) => {
             props.setPkmnName(e.target.value);
-            props.setPkmn6(e.target.value);
             props.updatePkmn6(e.target.value);
           }}
         />

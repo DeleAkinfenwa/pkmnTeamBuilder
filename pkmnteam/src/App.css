@@ -2,13 +2,14 @@
   text-align: center;
   background-color: rgb(201, 5, 5);
   min-height: 100%;
+  min-width: 100%;
   margin-top: 0;
   display: grid;
   grid-template-rows: 120px 1fr 1fr 1fr 60px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 header {
-  margin: top 15px;
+  margin-top: 0px;
   background-color: gold;
   grid-area: 1/1/1/6;
 }
@@ -17,9 +18,29 @@ nav {
   grid-area: 2/1/5/1;
   background-color: darkred;
 }
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
 footer {
+  margin-bottom: 0px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background-color: rgb(58, 58, 58);
   grid-area: 5/1/6/6;
+}
+.imgco img {
+  margin: 7px 10px;
+}
+
+.footerstuff {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 .title {
@@ -31,9 +52,13 @@ footer {
   -webkit-text-stroke-width: 2px;
 }
 
+.makeitfit {
+  height: 400px;
+  background-color: rgb(201, 5, 5);
+}
 .body {
   grid-area: 2/2/5/6;
-  display: inline;
+  /* display: inline; */
 }
 
 .home {
@@ -42,10 +67,10 @@ footer {
   margin: 200px;
   color: gold;
 }
-/* .text {
-  font-size: x-large;
+.text {
+  font-size: large;
   color: white;
-} */
+}
 
 .pokeball {
   max-height: 35px;
@@ -61,12 +86,13 @@ footer {
   justify-content: left;
   flex-direction: column;
   max-width: 300px;
+  margin-top: 20px;
 }
 
 .formButton {
-  grid-area: 4/2/4/1;
-  width: 40px;
-  height: 30px;
+  grid-area: 4/3/4/3;
+  width: 60px;
+  height: 40px;
 }
 .input {
   margin: 25px;
@@ -79,8 +105,9 @@ footer {
   grid-area: 2/3/4/5;
 }
 .sprite {
-  width: 100px;
-  height: 100px;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
 }
 
 .team {
@@ -103,7 +130,6 @@ footer {
   text-align: center;
   color: white;
   max-width: 200px;
-  /* grid-area: 5/1/5/2; */
 }
 
 .contacts {
@@ -125,4 +151,21 @@ footer {
   text-decoration: none;
   border: solid blue 4px;
   display: block;
+}
+
+@media (max-width: 700px) {
+  .title {
+    color: red;
+    font-size: 30px;
+    font-family: monospace;
+    -webkit-text-fill-color: yellow;
+    -webkit-text-stroke-color: blue;
+    -webkit-text-stroke-width: 2px;
+  }
+
+  .sprite {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
 }
