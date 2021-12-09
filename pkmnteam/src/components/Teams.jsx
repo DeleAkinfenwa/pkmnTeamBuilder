@@ -4,7 +4,7 @@ export default function Teams(props) {
   return (
     <div>
       <h3 className="teamtext">List of pokemon teams</h3>
-      <team is="x3d" className="team">
+      <div className="team">
         {props.teams.map((team, key) => (
           <div className="teamViewSprites" key={key}>
             <p className="teamTitle">{`${team.fields.name}'s team, ${team.fields.teamName}`}</p>
@@ -34,7 +34,7 @@ export default function Teams(props) {
             />
           </div>
         ))}
-      </team>
+      </div>
     </div>
   );
 }

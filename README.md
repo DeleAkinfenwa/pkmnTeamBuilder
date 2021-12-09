@@ -76,11 +76,11 @@ Pokeapi.co
 
 ### PostMVP
 
+- add a team inspect page (via modal)
 - add a like button
 - add collapsable Navigation Bar
   add autocomplete to the form
 - Use local storage to save user favorites
-- add a team inspect page
 - ![Team Inspection Page](/pkmnteam/project_imgs/team-inspect.png)
 
 ## Project Schedule

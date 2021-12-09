@@ -99,10 +99,15 @@ footer {
   border: solid blue 4px;
   width: 250px;
   font-size: x-large;
+  border-radius: 10px;
 }
 
 .teamBuildSprites {
   grid-area: 2/3/4/5;
+  background-color: darkred;
+  border-radius: 30px;
+  border: double gold 4px;
+  box-shadow: 5px 10px;
 }
 .sprite {
   display: inline-block;
@@ -111,9 +116,8 @@ footer {
 }
 
 .team {
-  text-align: left;
-  background-color: gold;
-  height: 50px;
+  text-align: center;
+
   overflow-y: scroll;
 }
 .teamTitle {
@@ -126,7 +130,10 @@ footer {
 }
 .teamViewSprites {
   margin: 20px;
-  height: 25px;
+  height: -10px;
+  background-color: darkred;
+  border: solid gold 5px;
+  border-radius: 10px;
   display: inline-block;
 }
 
@@ -134,9 +141,6 @@ footer {
   text-align: center;
   color: white;
   max-width: 200px;
-}
-
-.contacts {
 }
 
 .icon {
@@ -156,6 +160,7 @@ footer {
   text-decoration: none;
   border: solid blue 4px;
   display: block;
+  border-radius: 10px;
 }
 
 @media (max-width: 770px) {
@@ -172,6 +177,7 @@ footer {
     text-decoration: none;
     border: solid gold 4px;
     display: block;
+    border-radius: 10px;
   }
 
   .sprite {
